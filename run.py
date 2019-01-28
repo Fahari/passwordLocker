@@ -8,3 +8,9 @@ def create_user(fname,lname,username,email):
     '''
     new_user = User(fname,lname,phone,email)
     return new_user
+
+def save_user(user):
+    '''
+    Function to save user
+    '''
+    user.save_user()
