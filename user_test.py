@@ -71,6 +71,19 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(found_user.email,test_user.email)
 
+    def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the user.
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Test","user","Fahari","me@xyz.com") # new contact
+        test_user.save_user()
+
+        user_exists = User.user_exist("Fahari")
+
+        self.assertTrue(user_exists)
+
 class TestCredentials(unittest.TestCase):
     """
     Class that generates new instances of credentials.
@@ -138,6 +151,19 @@ class TestCredentials(unittest.TestCase):
         found_credentials = Credentials.find_by_user_name("TestUser")
 
         self.assertEqual(found_credentials.password,test_credentials.password)
+
+    def test_credentials_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the credentials.
+        '''
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("TestUser","123456789") # new credentials
+        test_credentials.save_credentials()
+
+        credentials_exists = Credentials.credentials_exist("TestUser")
+
+        self.assertTrue(credentials_exists)
 
 if __name__ == '__main__':
     unittest.main()
