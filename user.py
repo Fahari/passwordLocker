@@ -21,7 +21,16 @@ class User:
         self.user_name = user_name
         self.email = email
 
-class Credentials:
-    '''
-    Class that generates new instances of Credentials
-    '''
+    def save_user(self):
+
+        '''
+        save_user method saves user objects into user_list
+        '''
+
+        User.user_list.append(self)
+
+
+# class Credentials:
+#     '''
+#     Class that generates new instances of Credentials
+#     '''
