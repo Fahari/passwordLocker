@@ -47,6 +47,29 @@ class TestUser(unittest.TestCase):
             test_user.save_user()
             self.assertEqual(len(User.user_list),2)
 
+    def test_delete_user(self):
+            '''
+            test_delete_user to test if we can remove a user from our user list
+            '''
+            self.new_user.save_user()
+            test_contact = User("Test","user","Fahari","me@xyz.com") # new user
+            test_contact.save_user()
+
+            self.new_user.delete_user()# Deleting a user object
+            self.assertEqual(len(User.user_list),1)
+
+    def test_find_user_by_user_name(self):
+        '''
+        test to check if we can find a user by user_name and display information
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Test","user","Fahari","me@xyz.com") # new contact
+        test_user.save_user()
+
+        found_user = User.find_by_user_name("Fahari")
+
+        self.assertEqual(found_user.email,test_user.email)
 
 class TestCredentials(unittest.TestCase):
     """
@@ -91,6 +114,30 @@ class TestCredentials(unittest.TestCase):
             test_credentials = Credentials("TestUser","123456789")
             test_credentials.save_credentials()
             self.assertEqual(len(Credentials.credentials_list),2)
+
+    def test_delete_credentials(self):
+            '''
+            test_delete_credentials to test if we can remove a credential from our credential list
+            '''
+            self.new_credentials.save_credentials()
+            test_credentials = Credentials("TestUser","123456789") # new credential
+            test_credentials.save_credentials()
+
+            self.new_credentials.delete_credentials()# Deleting a credential object
+            self.assertEqual(len(Credentials.credentials_list),1)
+
+    def test_find_credentials_by_user_name(self):
+        '''
+        test to check if we can find a user by user_name and display information
+        '''
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("TestUser","123456789") # new contact
+        test_credentials.save_credentials()
+
+        found_credentials = Credentials.find_by_user_name("TestUser")
+
+        self.assertEqual(found_credentials.password,test_credentials.password)
 
 if __name__ == '__main__':
     unittest.main()

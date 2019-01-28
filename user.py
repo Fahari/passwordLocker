@@ -12,7 +12,7 @@ class User:
             Args:
                 first_name: New user first name.
                 last_name : New user last name.
-                user_name: New user phone number.
+                user_name: New user user_name.
                 email : New user email address.
         '''
 
@@ -28,6 +28,29 @@ class User:
         '''
 
         User.user_list.append(self)
+
+    def delete_user(self):
+
+        '''
+        delete_user method deletes a saved user from the user_list
+        '''
+
+        User.user_list.remove(self)
+
+    @classmethod
+    def find_by_user_name(cls,user_name):
+        '''
+        Method that takes in a user_name and returns a user that matches that user_name.
+
+        Args:
+            user_name: user_name to search for
+        Returns :
+            credentials of person that matches the user_name.
+        '''
+
+        for user in cls.user_list:
+            if user.user_name == user_name:
+                return user
 
 
 class Credentials:
@@ -59,3 +82,26 @@ class Credentials:
         '''
 
         Credentials.credentials_list.append(self)
+
+    def delete_credentials(self):
+
+        '''
+        delete_credentials method deletes a saved credential from the credentials_list
+        '''
+
+        Credentials.credentials_list.remove(self)
+
+    @classmethod
+    def find_by_user_name(cls,user_name):
+        '''
+        Method that takes in a user_name and returns a user that matches that user-name.
+
+        Args:
+            number: Phone number to search for
+        Returns :
+            credentials of person that matches the number.
+        '''
+
+        for credentials in cls.credentials_list:
+            if credentials.user_name == user_name:
+                return credentials
