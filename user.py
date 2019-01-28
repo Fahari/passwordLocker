@@ -30,7 +30,32 @@ class User:
         User.user_list.append(self)
 
 
-# class Credentials:
-#     '''
-#     Class that generates new instances of Credentials
-#     '''
+class Credentials:
+    '''
+    Class that generates new instances of Credentials
+    '''
+    credentials_list=[]
+
+    def __init__(self,account_name,password):
+
+        """
+
+        Args:
+            account_name : New  credentials account name.
+            password : New credentials password.
+
+        self.account_name = account_name
+        self.password = password
+
+
+        """
+        self.account_name = account_name
+        self.password = password
+
+    def save_credentials(self):
+
+        '''
+        save_credentials method saves credentials objects into credentials_list
+        '''
+
+        Credentials.credentials_list.append(self)
