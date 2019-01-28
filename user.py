@@ -20,3 +20,8 @@ class User:
         self.last_name = last_name
         self.user_name = user_name
         self.email = email
+
+class Credentials:
+    '''
+    Class that generates new instances of Credentials
+    '''
