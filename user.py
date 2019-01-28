@@ -36,20 +36,20 @@ class Credentials:
     '''
     credentials_list=[]
 
-    def __init__(self,account_name,password):
+    def __init__(self,user_name,password):
 
         """
 
         Args:
-            account_name : New  credentials account name.
+            user_name : New  credentials user name.
             password : New credentials password.
 
-        self.account_name = account_name
+        self.user_name = user_name
         self.password = password
 
 
         """
-        self.account_name = account_name
+        self.user_name = user_name
         self.password = password
 
     def save_credentials(self):
