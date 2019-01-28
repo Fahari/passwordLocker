@@ -1,3 +1,4 @@
+import pyperclip
 import unittest # Importing the unittest module
 from user import User
 from user import Credentials# Importing the user class
