@@ -21,7 +21,7 @@ When starting up the application, the user is met with the following shortcodes:
 | Find a credential | Type: fc <br>Username: Fahari | Outputs all saved Fahari credentials  |
 | Exit Application | Type: ex | **Closes the application** <br>Bye Fahari.... |
 
-## Prerequiites
+## Prerequisites
     - Python 3.6 required
 
 ## Set-up and Installation
