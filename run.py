@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.6
-from user import User
-from user import Credentials
+from user import User, Credentials
+# from user import Credentials
 
 def create_user(fname,lname,username,email):
     '''
@@ -151,7 +151,7 @@ def main():
                 else:
                         print("That credential does not exist")
         elif short_code == "ex":
-                print("Bye .......")
+                print(f"Bye {user_name}.......")
                 break
         else:
                 print("Please use the short codes")
