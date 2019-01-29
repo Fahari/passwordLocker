@@ -1,5 +1,5 @@
 # passwordLocker
-## Password locker is a simple python application that stores and generates passwords for different user accounts
+### Password locker is a simple python application that stores and generates passwords for different user accounts
 ### January 29th, 2019
 #### By **[Kironji Kevin](https://github.com/Fahari)**
 
@@ -9,7 +9,7 @@ The password locker runs on the terminal and uses short codes to navigate throug
 When starting up the application, the user is met with the following shortcodes:
 
     1. cc - Creates a new credential
-    2. dc - Display credentials
+    2. dc - Displays credentials
     3. fc - Find a credential
     4. ex - Exit the application
 
@@ -36,7 +36,7 @@ No known errors as at the completion of the project.
     - Python 3.6
 
 ## Support and contact details
-Contact me on.karonjekevin67@gmail.com for any comments, reviews or advice.
+Contact me at karonjekevin67@gmail.com for any comments, reviews or advice.
 
 ### License
 This project is under the [MIT](https://github.com/Fahari/passwordLocker/blob/master/LICENSE) licence
