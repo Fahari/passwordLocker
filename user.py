@@ -74,15 +74,3 @@ class User:
         method that returns the user list
         '''
         return cls.user_list
-
-    # @classmethod
-    # def copy_email(cls,user_name):
-    #     user_found = User.find_by_user_name(user_name)
-    #     pyperclip.copy(user_found.email)
-
-
-
-    # @classmethod
-    # def copy_email(cls,user_name):
-    #     credentials_found = Credentials.find_by_user_name(user_name)
-    #     pyperclip.copy(credentials_found.user_name)
